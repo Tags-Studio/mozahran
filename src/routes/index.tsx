@@ -111,7 +111,9 @@ function Index() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="#contact"
+                href="https://wa.me/201009215131"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full bg-primary py-3 pl-3 pr-6 text-base font-medium text-primary-foreground transition-transform hover:scale-[1.02]"
               >
                 اطلب عرض سعر
@@ -143,7 +145,7 @@ function Index() {
               </a>
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/mohamed-zahran-884ba281/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -432,7 +434,9 @@ function Index() {
           </div>
           <div className="md:col-span-4 flex flex-wrap gap-3 md:justify-end">
             <a
-              href="mailto:hello@example.com"
+              href="https://wa.me/201009215131"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 rounded-full bg-primary-foreground py-3 pl-3 pr-6 text-base font-medium text-primary transition-transform hover:scale-[1.02]"
             >
               تواصل معي
