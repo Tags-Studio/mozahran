@@ -94,7 +94,7 @@ function Index() {
           alt="محمد زهران — آرت دايركتور"
           width={1024}
           height={1024}
-          className="pointer-events-none relative mx-auto mt-6 h-[300px] w-auto object-contain object-bottom md:absolute md:bottom-0 md:left-0 md:h-[90%] md:mt-0"
+          className="pointer-events-none relative mx-auto mt-6 h-[300px] w-auto object-contain object-bottom scale-x-[-1] md:absolute md:bottom-0 md:left-0 md:h-[90%] md:mt-0"
         />
 
         <div className="relative grid min-h-[80vh] grid-cols-1 gap-6 p-6 sm:p-10 md:min-h-[85vh] md:grid-cols-12 md:p-14">
@@ -104,7 +104,7 @@ function Index() {
             </span>
             <h1
               className="mt-4 pointer-events-none font-black leading-[0.95] tracking-tight text-surface-foreground"
-              style={{ fontSize: "clamp(2.25rem, 7vw, 6rem)" }}
+              style={{ fontSize: "clamp(2rem, 5.5vw, 4rem)" }}
             >
               أصمم هويات بصرية تجعل مشروعك
               <br />
@@ -136,16 +136,30 @@ function Index() {
               </a>
             </div>
             <div className="flex gap-3">
-              {[Twitter, Instagram, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="social"
-                  className="grid h-11 w-11 place-items-center rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/201009215131"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="grid h-11 w-11 place-items-center rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.729-1.452L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.115-2.908-6.995-1.878-1.88-4.357-2.912-6.997-2.914-5.444 0-9.869 4.426-9.873 9.87.002 1.69.447 3.336 1.291 4.772L1.752 21.84l4.895-1.286zm11.517-5.59c-.31-.154-1.834-.904-2.115-1.007-.28-.103-.485-.155-.688.154-.203.31-.787.98-.965 1.186-.177.207-.355.23-.665.077-.31-.154-1.31-.483-2.497-1.542-.924-.824-1.548-1.842-1.73-2.15-.181-.31-.019-.477.136-.63.14-.137.31-.36.465-.54.155-.18.207-.31.31-.517.103-.207.052-.386-.026-.54-.078-.154-.689-1.66-.944-2.27-.249-.596-.501-.515-.689-.524-.177-.01-.38-.01-.58-.01-.202 0-.532.077-.81.38-.28.31-1.066 1.042-1.066 2.541 0 1.498 1.09 2.946 1.242 3.153.153.206 2.146 3.277 5.198 4.593.725.313 1.291.5 1.733.64.728.232 1.39.2 1.912.12.583-.088 1.834-.75 2.09-1.474.256-.723.256-1.343.18-1.474-.077-.13-.28-.206-.59-.36z" />
+                </svg>
+              </a>
+              {/* LinkedIn */}
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="grid h-11 w-11 place-items-center rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

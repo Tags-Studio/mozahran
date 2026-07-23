@@ -363,7 +363,7 @@ export default function PortfolioGrid() {
               className={`px-5 py-3 rounded-full text-sm font-medium transition-colors cursor-pointer ${
                 filter === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-surface text-foreground/80 hover:text-foreground hover:bg-surface/80"
+                  : "bg-background text-foreground/80 border border-border/60 hover:bg-secondary/15 hover:text-foreground"
               }`}
             >
               {category}
@@ -401,15 +401,15 @@ export default function PortfolioGrid() {
                     <p className="text-white text-center px-4">{project.description}</p>
                   </motion.div>
                 </div>
-                <div className="p-6">
-                  <div className="text-sm font-medium text-primary mb-1">{project.category}</div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
+                <div className="p-6 text-right">
+                  <div className="text-sm font-medium text-blue-400 mb-1">{project.category}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                   {project.externalLink ? (
                     <a
                       href={project.externalLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:underline inline-flex items-center"
+                      className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center"
                     >
                       <svg
                         className="w-4 h-4 ml-2"
@@ -430,7 +430,7 @@ export default function PortfolioGrid() {
                   ) : (
                     <button
                       onClick={() => openModal(project)}
-                      className="text-primary hover:underline inline-flex items-center"
+                      className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center"
                     >
                       <svg
                         className="w-4 h-4 ml-2"
