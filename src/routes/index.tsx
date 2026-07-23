@@ -69,10 +69,10 @@ function Index() {
         {/* Portrait image */}
         <img
           src={heroImg}
-          alt="Tag Studio brand identity composition"
-          width={1408}
-          height={1408}
-          className="pointer-events-none absolute inset-y-0 left-1/2 h-full w-auto -translate-x-1/2 object-cover opacity-90 mix-blend-luminosity md:mix-blend-normal"
+          alt="Tag Studio founder portrait"
+          width={1024}
+          height={1024}
+          className="pointer-events-none absolute bottom-0 right-0 h-[70%] w-auto object-contain object-bottom md:h-[90%]"
         />
 
         <div className="relative grid min-h-[80vh] grid-cols-1 gap-6 p-6 sm:p-10 md:min-h-[85vh] md:grid-cols-12 md:p-14">
