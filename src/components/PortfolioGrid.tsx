@@ -395,7 +395,7 @@ export default function PortfolioGrid() {
                     style={{ objectFit: project.category === "تصميمات السوشيال ميديا" ? "contain" : "cover" }}
                   />
                   <motion.div
-                    className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300"
+                    className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300"
                     whileHover={{ opacity: 1 }}
                   >
                     <p className="text-white text-center px-4">{project.description}</p>
