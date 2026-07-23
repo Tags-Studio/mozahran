@@ -81,7 +81,7 @@ function Index() {
       {/* Hero */}
       <section
         id="home"
-        className="relative mx-auto mt-4 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface text-surface-foreground sm:mt-6"
+        className="relative mx-auto mt-4 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface text-surface-foreground sm:mt-6 border border-border/30 hover:-translate-y-1.5 hover:shadow-[0_40px_80px_rgba(59,130,246,0.12)] hover:border-primary/20 transition-all duration-700 ease-out"
       >
         {/* Glow behind the mirrored portrait on the left */}
         <div
@@ -238,7 +238,7 @@ function Index() {
       </section>
 
       {/* System / Philosophy */}
-      <section className="mx-auto mt-6 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface p-8 text-surface-foreground sm:p-12 md:p-16">
+      <section className="mx-auto mt-6 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface p-8 text-surface-foreground sm:p-12 md:p-16 border border-border/30 hover:-translate-y-1.5 hover:shadow-[0_40px_80px_rgba(59,130,246,0.08)] hover:border-primary/20 transition-all duration-700 ease-out">
         <div className="grid gap-8 md:grid-cols-12">
           <div className="md:col-span-5">
             <span className="text-xs font-medium uppercase tracking-widest text-surface-foreground/60">
@@ -260,7 +260,7 @@ function Index() {
 
       {/* Why Me */}
       <section id="why" className="mx-auto mt-6 max-w-[1400px]">
-        <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:p-16">
+        <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:p-16 border border-border/40 hover:-translate-y-1.5 hover:shadow-[0_30px_60px_rgba(59,130,246,0.05)] hover:border-primary/10 transition-all duration-700 ease-out">
           <div className="max-w-3xl">
             <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
               لماذا تختارني؟
@@ -295,7 +295,7 @@ function Index() {
             ].map(({ Icon, t, d }) => (
               <div
                 key={t}
-                className="group flex gap-4 rounded-3xl bg-background p-6 transition-colors hover:bg-background/70"
+                className="group flex gap-4 rounded-3xl bg-background border border-border/40 p-6 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-primary/20 hover:bg-background/80"
               >
                 <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground">
                   <Icon className="h-5 w-5" />
@@ -315,7 +315,7 @@ function Index() {
       {/* About */}
       <section id="about" className="mx-auto mt-6 max-w-[1400px]">
         <div className="grid gap-6 md:grid-cols-12">
-          <div className="rounded-[2rem] bg-primary p-8 text-primary-foreground sm:p-12 md:col-span-5 md:p-14">
+          <div className="rounded-[2rem] bg-primary p-8 text-primary-foreground sm:p-12 md:col-span-5 md:p-14 border border-white/10 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-500 ease-out">
             <span className="text-xs font-medium uppercase tracking-widest text-primary-foreground/70">
               من أنا
             </span>
@@ -336,7 +336,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:col-span-7 md:p-14">
+          <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:col-span-7 md:p-14 border border-border/40 hover:-translate-y-1.5 hover:shadow-2xl hover:border-primary/20 transition-all duration-500 ease-out">
             <p className="text-base leading-loose text-foreground sm:text-lg">
               أنا محمد زهران، آرت دايركتور ومصمم جرافيك أساعد الشركات
               والمشروعات على تأسيس حضور بصري قوي وواضح. أعمل مع عملاء في مصر
@@ -354,7 +354,7 @@ function Index() {
 
       {/* Services */}
       <section id="services" className="mx-auto mt-6 max-w-[1400px]">
-        <div className="rounded-[2rem] bg-surface p-8 text-surface-foreground sm:p-12 md:p-16">
+        <div className="rounded-[2rem] bg-surface p-8 text-surface-foreground sm:p-12 md:p-16 border border-border/30 hover:-translate-y-1.5 hover:shadow-2xl hover:border-primary/20 transition-all duration-700 ease-out">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <span className="text-xs font-medium uppercase tracking-widest text-surface-foreground/60">
@@ -391,7 +391,7 @@ function Index() {
             ].map(({ Icon, t, d }) => (
               <div
                 key={t}
-                className="group rounded-3xl bg-surface-foreground/5 p-6 transition-colors hover:bg-surface-foreground/10"
+                className="group rounded-3xl bg-surface-foreground/5 border border-transparent p-6 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-primary/20 hover:bg-surface-foreground/10"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="grid h-12 w-12 place-items-center rounded-2xl bg-primary text-primary-foreground">
@@ -414,7 +414,7 @@ function Index() {
 
       {/* Principles */}
       <section className="mx-auto mt-6 max-w-[1400px]">
-        <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:p-16">
+        <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:p-16 border border-border/40 hover:-translate-y-1.5 hover:shadow-[0_30px_60px_rgba(59,130,246,0.05)] hover:border-primary/10 transition-all duration-700 ease-out">
           <div className="max-w-3xl">
             <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
               مبادئي وطريقة تفكيري
@@ -447,7 +447,7 @@ function Index() {
             ].map(({ n, Icon, t, d }) => (
               <div
                 key={n}
-                className="rounded-3xl bg-background p-6 transition-transform hover:-translate-y-1"
+                className="rounded-3xl bg-background border border-border/40 p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-primary/25"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-3xl font-black text-primary/30">
@@ -472,7 +472,7 @@ function Index() {
       {/* Contact CTA */}
       <section
         id="contact"
-        className="mx-auto mt-6 max-w-[1400px] overflow-hidden rounded-[2rem] bg-primary p-8 text-primary-foreground sm:p-12 md:p-16"
+        className="mx-auto mt-6 max-w-[1400px] overflow-hidden rounded-[2rem] bg-primary p-8 text-primary-foreground sm:p-12 md:p-16 border border-white/10 hover:-translate-y-1.5 hover:shadow-[0_45px_90px_rgba(59,130,246,0.22)] transition-all duration-700 ease-out"
       >
         <div className="grid gap-8 md:grid-cols-12 md:items-center">
           <div className="md:col-span-8">
