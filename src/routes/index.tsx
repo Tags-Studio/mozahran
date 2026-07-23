@@ -81,38 +81,29 @@ function Index() {
         id="home"
         className="relative mx-auto mt-4 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface text-surface-foreground sm:mt-6"
       >
+        {/* Glow behind the mirrored portrait on the left */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-70"
+          className="pointer-events-none absolute inset-0 opacity-80"
           style={{
             background:
-              "radial-gradient(60% 60% at 70% 40%, oklch(0.35 0.22 265 / 0.55), transparent 60%)",
+              "radial-gradient(55% 55% at 20% 55%, oklch(0.45 0.25 250 / 0.45), transparent 75%)",
           }}
         />
 
-        <img
-          src={heroImg}
-          alt="محمد زهران — آرت دايركتور"
-          width={1024}
-          height={1024}
-          className="pointer-events-none relative mx-auto mt-6 h-[300px] w-auto object-contain object-bottom scale-x-[-1] md:absolute md:bottom-0 md:left-0 md:h-[90%] md:mt-0"
-        />
-
-        <div className="relative grid min-h-[80vh] grid-cols-1 gap-6 p-6 sm:p-10 md:min-h-[85vh] md:grid-cols-12 md:p-14">
-          <div className="col-span-12 flex flex-col items-center text-center">
+        <div className="relative grid grid-cols-1 items-center gap-10 p-6 sm:p-10 md:grid-cols-2 md:p-16 z-10 min-h-[80vh] md:min-h-[85vh]">
+          {/* Text Column (Right on desktop, Top on mobile) */}
+          <div className="flex flex-col items-start text-right justify-center gap-6 order-1 md:order-2">
             <span className="rounded-full bg-primary/20 px-4 py-1.5 text-xs font-medium text-surface-foreground/90 sm:text-sm">
-              محمد زهران — آرت دايركتور
+              محمد زهران — مصمم هويات بصرية
             </span>
             <h1
-              className="mt-4 pointer-events-none font-black leading-[0.95] tracking-tight text-surface-foreground"
-              style={{ fontSize: "clamp(2rem, 5.5vw, 4rem)" }}
+              className="font-black leading-[1.15] tracking-tight text-surface-foreground"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.8rem)" }}
             >
-              أصمم هويات بصرية تجعل مشروعك
+              أصمم هويات بصرية تجعل
               <br />
-              أوضح وأكثر ثقة
+              مشروعك <span className="text-blue-400">أوضح وأكثر ثقة</span>
             </h1>
-          </div>
-
-          <div className="col-span-12 mt-auto flex flex-col justify-end gap-6 md:col-span-6 md:col-start-1 md:items-start md:text-right">
             <p className="max-w-md text-base leading-relaxed text-surface-foreground/85 sm:text-lg">
               من الشعار إلى دليل الهوية والمطبوعات والمحتوى البصري، أبني
               للشركات والمشروعات في السعودية ومصر حضورًا متناسقًا وواضحًا
@@ -129,13 +120,15 @@ function Index() {
                 </span>
               </a>
               <a
-                href="#services"
+                href="#portfolio-grid"
                 className="inline-flex items-center gap-2 rounded-full border border-surface-foreground/25 px-6 py-3 text-base font-medium text-surface-foreground/90 transition-colors hover:bg-surface-foreground/10"
               >
                 شاهد أعمالي
               </a>
             </div>
-            <div className="flex gap-3">
+            
+            {/* Social Icons */}
+            <div className="flex gap-3 mt-2">
               {/* WhatsApp */}
               <a
                 href="https://wa.me/201009215131"
@@ -161,6 +154,17 @@ function Index() {
                 </svg>
               </a>
             </div>
+          </div>
+
+          {/* Image Column (Left on desktop, Bottom on mobile) */}
+          <div className="flex justify-center items-end h-full order-2 md:order-1 self-end">
+            <img
+              src={heroImg}
+              alt="محمد زهران — آرت دايركتور"
+              width={1024}
+              height={1024}
+              className="pointer-events-none max-h-[50vh] md:max-h-[75vh] w-auto object-contain object-bottom scale-x-[-1]"
+            />
           </div>
         </div>
       </section>
