@@ -16,6 +16,7 @@ import {
   Award,
 } from "lucide-react";
 import heroImg from "@/assets/hero-portrait.png";
+import PortfolioGrid from "@/components/PortfolioGrid";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,6 +49,7 @@ export const Route = createFileRoute("/")({
 const NAV = [
   { label: "الرئيسية", href: "#home" },
   { label: "من أنا", href: "#about" },
+  { label: "معرض الأعمال", href: "#portfolio-grid" },
   { label: "الخدمات", href: "#services" },
   { label: "لماذا أنا", href: "#why" },
   { label: "تواصل", href: "#contact" },
@@ -334,6 +336,9 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Grid */}
+      <PortfolioGrid />
 
       {/* Principles */}
       <section className="mx-auto mt-6 max-w-[1400px]">
