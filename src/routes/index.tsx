@@ -14,6 +14,8 @@ import {
   Target,
   Sparkles,
   Award,
+  Users,
+  Briefcase,
 } from "lucide-react";
 import heroImg from "@/assets/hero-portrait.png";
 import PortfolioGrid from "@/components/PortfolioGrid";
@@ -171,18 +173,68 @@ function Index() {
         </div>
       </section>
 
-      {/* Trust stats */}
-      <section className="mx-auto mt-6 grid max-w-[1400px] grid-cols-1 gap-3 sm:grid-cols-3">
+      {/* 3D Floating Trust Stats */}
+      <section className="mx-auto mt-8 grid max-w-[1400px] grid-cols-1 gap-6 sm:grid-cols-3 px-2">
         {[
-          { k: "منذ عام 2012", v: "خبرة متراكمة في بناء الهويات البصرية" },
-          { k: "السعودية ومصر", v: "تنفيذ للمشروعات في المنطقة" },
-          { k: "ملفات منظمة", v: "جاهزة للطباعة والتطبيق الفعلي" },
-        ].map((s) => (
-          <div key={s.k} className="rounded-3xl bg-pill p-6">
-            <div className="text-lg font-semibold text-foreground">{s.k}</div>
-            <div className="mt-1 text-sm text-muted-foreground">{s.v}</div>
-          </div>
-        ))}
+          { 
+            k: "+2000 مشروع", 
+            v: "تصاميم إبداعية وهوية بصرية متكاملة تم تنفيذها بدقة.", 
+            Icon: Briefcase,
+            color: "from-blue-500/20 to-cyan-500/10",
+            iconColor: "text-blue-400",
+            floatDuration: 5
+          },
+          { 
+            k: "+500 عميل", 
+            v: "علامات تجارية وشركات وثقت بنا في السعودية ومصر.", 
+            Icon: Users,
+            color: "from-purple-500/20 to-pink-500/10",
+            iconColor: "text-purple-400",
+            floatDuration: 5.6
+          },
+          { 
+            k: "+12 سنة خبرة", 
+            v: "شغف مستمر بالابتكار الفني وتطوير الأنظمة البصرية.", 
+            Icon: Award,
+            color: "from-amber-500/20 to-orange-500/10",
+            iconColor: "text-amber-400",
+            floatDuration: 4.8
+          },
+        ].map((s, index) => {
+          const Icon = s.Icon;
+          return (
+            <div 
+              key={index} 
+              className="relative overflow-hidden rounded-[2rem] bg-pill border border-border/40 p-8 shadow-[0_15px_30px_rgba(0,0,0,0.02)] transition-all duration-500 hover:-translate-y-2.5 hover:shadow-[0_30px_60px_rgba(59,130,246,0.08)] hover:border-primary/30 group"
+              style={{
+                animation: `float-slow-${index} ${s.floatDuration}s ease-in-out infinite`,
+                animationDelay: `${index * 0.3}s`
+              }}
+            >
+              {/* Inject CSS keyframes inline dynamically for unique float animations */}
+              <style dangerouslySetInnerHTML={{__html: `
+                @keyframes float-slow-${index} {
+                  0%, 100% { transform: translateY(0px) rotate(0deg); }
+                  50% { transform: translateY(-8px) rotate(0.5deg); }
+                }
+              `}} />
+
+              {/* 3D Inner Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none" />
+              
+              <div className="flex items-center gap-6 relative z-10">
+                {/* 3D-like Icon Badge Container */}
+                <div className={`grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br ${s.color} border border-white/10 shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_8px_16px_rgba(0,0,0,0.2)] group-hover:scale-105 transition-transform duration-300`}>
+                  <Icon className={`h-7 w-7 ${s.iconColor}`} />
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-black text-foreground tracking-tight">{s.k}</div>
+                  <div className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{s.v}</div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </section>
 
       {/* System / Philosophy */}
