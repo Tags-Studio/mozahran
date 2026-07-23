@@ -81,7 +81,7 @@ function Index() {
       {/* Hero */}
       <section
         id="home"
-        className="relative mx-auto mt-4 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface text-surface-foreground sm:mt-6 border border-border/30 hover:-translate-y-1.5 hover:shadow-[0_40px_80px_rgba(59,130,246,0.12)] hover:border-primary/20 transition-all duration-700 ease-out"
+        className="relative mx-auto mt-4 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface text-surface-foreground sm:mt-6 border border-border/30 hover:border-primary/20 hover:shadow-[0_40px_80px_rgba(59,130,246,0.15)] hover-3d"
       >
         {/* Glow behind the mirrored portrait on the left */}
         <div
@@ -205,7 +205,7 @@ function Index() {
           return (
             <div 
               key={index} 
-              className="relative overflow-hidden rounded-[2rem] bg-pill border border-border/40 p-8 shadow-[0_15px_30px_rgba(0,0,0,0.02)] transition-all duration-500 hover:-translate-y-2.5 hover:shadow-[0_30px_60px_rgba(59,130,246,0.08)] hover:border-primary/30 group"
+              className="relative overflow-hidden rounded-[2rem] bg-pill border border-border/40 p-8 shadow-[0_15px_30px_rgba(0,0,0,0.02)] hover-3d hover:shadow-[0_30px_60px_rgba(59,130,246,0.1)] hover:border-primary/35 group"
               style={{
                 animation: `float-slow-${index} ${s.floatDuration}s ease-in-out infinite`,
                 animationDelay: `${index * 0.3}s`
@@ -295,7 +295,7 @@ function Index() {
             ].map(({ Icon, t, d }) => (
               <div
                 key={t}
-                className="group flex gap-4 rounded-3xl bg-background border border-border/40 p-6 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-primary/20 hover:bg-background/80"
+                className="group flex gap-4 rounded-3xl bg-background border border-border/40 p-6 hover-3d hover:border-primary/25 hover:shadow-xl hover:bg-background/80"
               >
                 <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground">
                   <Icon className="h-5 w-5" />
@@ -391,7 +391,7 @@ function Index() {
             ].map(({ Icon, t, d }) => (
               <div
                 key={t}
-                className="group rounded-3xl bg-surface-foreground/5 border border-transparent p-6 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-primary/20 hover:bg-surface-foreground/10"
+                className="group rounded-3xl bg-surface-foreground/5 border border-transparent p-6 hover-3d hover:border-primary/25 hover:shadow-xl hover:bg-surface-foreground/10"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="grid h-12 w-12 place-items-center rounded-2xl bg-primary text-primary-foreground">
@@ -447,7 +447,7 @@ function Index() {
             ].map(({ n, Icon, t, d }) => (
               <div
                 key={n}
-                className="rounded-3xl bg-background border border-border/40 p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-primary/25"
+                className="rounded-3xl bg-background border border-border/40 p-6 hover-3d hover:border-primary/30 hover:shadow-xl"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-3xl font-black text-primary/30">

@@ -44,3 +44,13 @@
     color: var(--color-foreground);
   }
 }
+
+@utility hover-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.5s ease, box-shadow 0.5s ease;
+  
+  &:hover {
+    transform: rotateX(3.5deg) rotateY(-3.5deg) translateZ(10px);
+  }
+}
