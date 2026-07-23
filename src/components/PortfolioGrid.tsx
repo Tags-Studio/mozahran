@@ -458,7 +458,9 @@ export default function PortfolioGrid() {
         {filter !== "الكل" && (
           <div className="mt-12 text-center">
             <a
-              href="#contact"
+              href="https://wa.me/201009215131"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center text-primary hover:text-primary/80 font-bold text-lg hover:underline transition-all"
             >
               تواصل معي لتصميم مشروع مشابه
