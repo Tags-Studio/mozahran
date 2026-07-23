@@ -340,27 +340,30 @@ export default function PortfolioGrid() {
   }
 
   return (
-    <section id="portfolio-grid" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio-grid" className="mx-auto mt-6 max-w-[1400px]">
+      <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:p-16">
         <motion.div
-          className="text-center mb-12"
+          className="mb-12 text-right"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">معرض أعمالي</h2>
-          <p className="mt-4 text-lg text-muted-foreground">مجموعة مختارة من مشروعات الهوية البصرية، المطبوعات، وتصاميم السوشيال ميديا.</p>
+          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+            معرض أعمالي
+          </span>
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-foreground sm:text-4xl md:text-5xl">معرض أعمالي</h2>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground max-w-2xl">مجموعة مختارة من مشروعات الهوية البصرية، المطبوعات، وتصاميم السوشيال ميديا.</p>
         </motion.div>
 
-        <div className="flex justify-center space-x-4 mb-8 space-x-reverse flex-wrap gap-2">
+        <div className="flex justify-start space-x-2 space-x-reverse mb-10 flex-wrap gap-2">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setCategoryFilter(category)} // استخدام الدالة الجديدة هنا
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-5 py-3 rounded-full text-sm font-medium transition-colors cursor-pointer ${
                 filter === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  : "bg-surface text-foreground/80 hover:text-foreground hover:bg-surface/80"
               }`}
             >
               {category}
@@ -368,7 +371,7 @@ export default function PortfolioGrid() {
           ))}
         </div>
 
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
@@ -378,11 +381,11 @@ export default function PortfolioGrid() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-background rounded-3xl shadow-lg overflow-hidden hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
+                className="bg-surface rounded-3xl overflow-hidden border border-border/40 hover:border-primary/30 transition-all duration-300"
               >
                 <div
                   className={`relative overflow-hidden ${
-                    project.category === "تصميمات السوشيال ميديا" ? "h-[400px]" : "h-64"
+                    project.category === "تصميمات السوشيال ميديا" ? "h-[380px]" : "h-64"
                   }`}
                 >
                   <img

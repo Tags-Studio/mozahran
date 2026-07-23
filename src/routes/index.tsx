@@ -91,16 +91,16 @@ function Index() {
 
         <img
           src={heroImg}
-          alt="محمد زهران — آرت دايركتور ومصمم جرافيك"
+          alt="محمد زهران — آرت دايركتور"
           width={1024}
           height={1024}
-          className="pointer-events-none absolute bottom-0 left-0 h-[70%] w-auto object-contain object-bottom md:h-[90%]"
+          className="pointer-events-none relative mx-auto mt-6 h-[300px] w-auto object-contain object-bottom md:absolute md:bottom-0 md:left-0 md:h-[90%] md:mt-0"
         />
 
         <div className="relative grid min-h-[80vh] grid-cols-1 gap-6 p-6 sm:p-10 md:min-h-[85vh] md:grid-cols-12 md:p-14">
           <div className="col-span-12 flex flex-col items-center text-center">
             <span className="rounded-full bg-primary/20 px-4 py-1.5 text-xs font-medium text-surface-foreground/90 sm:text-sm">
-              محمد زهران — آرت دايركتور ومصمم جرافيك
+              محمد زهران — آرت دايركتور
             </span>
             <h1
               className="mt-4 pointer-events-none font-black leading-[0.95] tracking-tight text-surface-foreground"
@@ -112,7 +112,7 @@ function Index() {
             </h1>
           </div>
 
-          <div className="col-span-12 mt-auto flex flex-col justify-end gap-6 md:col-span-5 md:col-start-8 md:items-start md:text-right">
+          <div className="col-span-12 mt-auto flex flex-col justify-end gap-6 md:col-span-6 md:col-start-1 md:items-start md:text-right">
             <p className="max-w-md text-base leading-relaxed text-surface-foreground/85 sm:text-lg">
               من الشعار إلى دليل الهوية والمطبوعات والمحتوى البصري، أبني
               للشركات والمشروعات في السعودية ومصر حضورًا متناسقًا وواضحًا
