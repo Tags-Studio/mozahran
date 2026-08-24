@@ -54,7 +54,7 @@ const projects = [
     id: 22,
     title: "هوية ساكن للإسكان",
     description: "تطوير هوية بصرية وعقارية راقية لمجمع ساكن للإسكان المؤسسي والشركات بالجبيل.",
-    imageUrl: "/images/logo-designs/saken-corporate-housing-logo.webp",
+    imageUrl: "/images/saken-portfolio-thumbnail.png",
     category: "الهوية البصرية",
     slug: "saken-corporate-housing-brand-identity",
     caseStudy: {
