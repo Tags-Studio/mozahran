@@ -524,11 +524,11 @@ export default function AgriculturalCaseStudy() {
             
             <div className="relative mt-12 flex flex-col items-center gap-4 pt-8 border-t border-slate-100">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#84CC16] text-2xl font-black text-white shadow-lg shadow-[#84CC16]/30">
-                إ
+                ع
               </div>
               <div className="text-center">
-                <p className="text-xl font-bold text-[#0F172A]">إدارة جمعية التنمية الزراعية</p>
-                <p className="mt-1 text-sm text-[#64748B] font-medium uppercase tracking-wider">عميل محمد زهران — الأحساء</p>
+                <p className="text-xl font-bold text-[#0F172A]">أ. عبد العزيز</p>
+                <p className="mt-1 text-sm text-[#64748B] font-medium uppercase tracking-wider">رئيس مجلس الإدارة — الأحساء</p>
               </div>
             </div>
           </figure>
