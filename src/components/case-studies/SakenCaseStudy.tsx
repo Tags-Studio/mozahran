@@ -566,13 +566,9 @@ export default function SakenCaseStudy() {
             <FadeInStaggerItem
               key={i}
               direction="up"
-              className={`group relative bg-white rounded-[2rem] p-4 border border-[#E8E2D8] shadow-sm hover:shadow-[0_20px_40px_rgb(102,73,54,0.1)] transition-all duration-300 flex flex-col justify-between ${
-                i === 0 || i === 1 ? "sm:col-span-2 lg:col-span-2" : ""
-              }`}
+              className="group relative bg-white rounded-[2rem] p-4 border border-[#E8E2D8] shadow-sm hover:shadow-[0_20px_40px_rgb(102,73,54,0.1)] transition-all duration-300 flex flex-col justify-between"
             >
-              <div className={`relative rounded-2xl overflow-hidden bg-[#FAF8F5] mb-3 ${
-                i === 0 || i === 1 ? "aspect-[16/9]" : "aspect-[16/10] sm:aspect-video"
-              }`}>
+              <div className="relative rounded-2xl overflow-hidden bg-[#FAF8F5] mb-3 aspect-[16/10] sm:aspect-[4/3]">
                 <img
                   src={item.src}
                   alt={item.alt}
@@ -612,13 +608,9 @@ export default function SakenCaseStudy() {
             <FadeInStaggerItem
               key={i}
               direction="up"
-              className={`group relative bg-white rounded-[2rem] p-4 border border-[#E8E2D8] shadow-sm hover:shadow-[0_20px_40px_rgb(102,73,54,0.1)] transition-all duration-300 flex flex-col justify-between ${
-                i === 0 || i === 1 ? "sm:col-span-2 lg:col-span-2" : ""
-              }`}
+              className="group relative bg-white rounded-[2rem] p-4 border border-[#E8E2D8] shadow-sm hover:shadow-[0_20px_40px_rgb(102,73,54,0.1)] transition-all duration-300 flex flex-col justify-between"
             >
-              <div className={`relative rounded-2xl overflow-hidden bg-[#FAF8F5] mb-3 ${
-                i === 0 || i === 1 ? "aspect-[16/9]" : "aspect-[16/10] sm:aspect-video"
-              }`}>
+              <div className="relative rounded-2xl overflow-hidden bg-[#FAF8F5] mb-3 aspect-[16/10] sm:aspect-[4/3]">
                 <img
                   src={item.src}
                   alt={item.alt}
