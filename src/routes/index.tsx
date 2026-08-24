@@ -50,10 +50,10 @@ export const Route = createFileRoute("/")({
 
 const NAV = [
   { label: "الرئيسية", href: "#home" },
-  { label: "من أنا", href: "#about" },
+  { label: "من أنا ولماذا أنا", href: "#about" },
   { label: "معرض الأعمال", href: "#portfolio-grid" },
+  { label: "دراسات الحالة", href: "#portfolio-grid" },
   { label: "الخدمات", href: "#services" },
-  { label: "لماذا أنا", href: "#why" },
   { label: "تواصل", href: "#contact" },
 ];
 
