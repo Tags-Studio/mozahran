@@ -433,7 +433,8 @@ export default function PortfolioGrid() {
                     </a>
                   ) : project.slug ? (
                     <Link
-                      to={`/work/${project.slug}`}
+                      to="/work/$slug"
+                      params={{ slug: project.slug }}
                       className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center"
                     >
                       <svg
