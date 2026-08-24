@@ -48,7 +48,7 @@ export default function AgriculturalCaseStudy() {
         "@type": "ListItem",
         position: 2,
         name: "أعمالنا",
-        item: `${baseUrl}/work`,
+        item: `${baseUrl}/#portfolio-grid`,
       },
       {
         "@type": "ListItem",
@@ -174,7 +174,7 @@ export default function AgriculturalCaseStudy() {
         <nav className="mb-8 text-sm font-bold text-[#64748B] tracking-wide flex gap-3 items-center" aria-label="مسار التنقل">
           <Link href="/" className="hover:text-[#84CC16] transition-colors">الرئيسية</Link>
           <span className="text-[#CBD5E1]">/</span>
-          <Link href="/work" className="hover:text-[#84CC16] transition-colors">أعمالنا</Link>
+          <Link href="/#portfolio-grid" className="hover:text-[#84CC16] transition-colors">أعمالنا</Link>
           <span className="text-[#CBD5E1]">/</span>
           <span className="text-[#1E293B] bg-white px-3 py-1 rounded-full shadow-sm" aria-current="page">الجمعية الزراعية</span>
         </nav>
@@ -629,7 +629,7 @@ export default function AgriculturalCaseStudy() {
 
       {/* ── FOOTER NAV ── */}
       <section className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-6 text-sm">
-        <Link href="/work" className="font-bold text-[#64748B] hover:text-[#84CC16] transition-colors">
+        <Link href="/#portfolio-grid" className="font-bold text-[#64748B] hover:text-[#84CC16] transition-colors">
           ← العودة إلى الأعمال
         </Link>
         <span className="font-mono text-xs uppercase tracking-[0.3em] text-[#94A3B8]">

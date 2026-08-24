@@ -49,7 +49,7 @@ export default function RagyBurgerCaseStudy() {
         "@type": "ListItem",
         position: 2,
         name: "أعمالنا",
-        item: `${baseUrl}/work`,
+        item: `${baseUrl}/#portfolio-grid`,
       },
       {
         "@type": "ListItem",
@@ -116,7 +116,7 @@ export default function RagyBurgerCaseStudy() {
               الرئيسية
             </Link>
             <span className="mx-3">/</span>
-            <Link href="/work" className="hover:text-[#FFC222] transition-colors">
+            <Link href="/#portfolio-grid" className="hover:text-[#FFC222] transition-colors">
               أعمالنا
             </Link>
             <span className="mx-3">/</span>
@@ -446,7 +446,7 @@ export default function RagyBurgerCaseStudy() {
 
       {/* ── FOOTER NAV ── */}
       <section className="mx-auto flex max-w-[1500px] flex-col justify-between gap-6 px-6 py-12 text-sm text-white/50 sm:flex-row sm:items-center lg:px-8 border-t border-white/10">
-        <Link href="/work" className="font-bold text-white hover:text-[#E31E24]">
+        <Link href="/#portfolio-grid" className="font-bold text-white hover:text-[#E31E24]">
           ← العودة إلى كل الأعمال
         </Link>
         <span className="font-mono text-[10px] uppercase tracking-[0.3em]">

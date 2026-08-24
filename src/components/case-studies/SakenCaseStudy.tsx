@@ -47,7 +47,7 @@ export default function SakenCaseStudy() {
         "@type": "ListItem",
         position: 2,
         name: "أعمالنا",
-        item: `${baseUrl}/work`,
+        item: `${baseUrl}/#portfolio-grid`,
       },
       {
         "@type": "ListItem",
@@ -245,7 +245,7 @@ export default function SakenCaseStudy() {
         <nav className="mb-8 text-sm font-bold text-[#8C827A] tracking-wide flex gap-3 items-center" aria-label="مسار التنقل">
           <Link href="/" className="hover:text-[#664936] transition-colors">الرئيسية</Link>
           <span className="text-[#D8D2C9]">/</span>
-          <Link href="/work" className="hover:text-[#664936] transition-colors">أعمالنا</Link>
+          <Link href="/#portfolio-grid" className="hover:text-[#664936] transition-colors">أعمالنا</Link>
           <span className="text-[#D8D2C9]">/</span>
           <span className="text-[#2C241E] bg-white px-3 py-1 rounded-full shadow-sm" aria-current="page">ساكن للإسكان المؤسسي</span>
         </nav>
@@ -671,7 +671,7 @@ export default function SakenCaseStudy() {
               <h2 className="text-3xl sm:text-4xl font-black text-[#2C241E]">دراسات حالة أخرى</h2>
             </div>
             <Link
-              href="/work"
+              href="/#portfolio-grid"
               className="mt-4 sm:mt-0 font-bold text-[#664936] hover:underline flex items-center gap-2"
             >
               عرض كل الأعمال ←

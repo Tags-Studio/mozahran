@@ -47,7 +47,7 @@ export default function ZaatarCaseStudy() {
         "@type": "ListItem",
         position: 2,
         name: "أعمالنا",
-        item: `${baseUrl}/work`,
+        item: `${baseUrl}/#portfolio-grid`,
       },
       {
         "@type": "ListItem",
@@ -132,7 +132,7 @@ export default function ZaatarCaseStudy() {
               الرئيسية
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/work" className="hover:text-[#95a20d]">
+            <Link href="/#portfolio-grid" className="hover:text-[#95a20d]">
               أعمالنا
             </Link>
             <span className="mx-2">/</span>
@@ -961,7 +961,7 @@ export default function ZaatarCaseStudy() {
 
       {/* ── Footer Nav ── */}
       <section className="mx-auto flex max-w-[1500px] flex-col justify-between gap-6 px-6 py-10 text-sm text-[#72796f] sm:flex-row sm:items-center lg:px-8">
-        <Link href="/work" className="font-bold text-[#7f8c0b] hover:underline">
+        <Link href="/#portfolio-grid" className="font-bold text-[#7f8c0b] hover:underline">
           ← العودة إلى كل الأعمال
         </Link>
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#b5bfa8]">
