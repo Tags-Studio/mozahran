@@ -4,9 +4,7 @@
 import { Link } from "@tanstack/react-router"
 import { caseStudies } from "../../lib/caseStudies"
 import { FadeIn, FadeInStaggerContainer, FadeInStaggerItem } from "../ui/FadeIn"
-import { Fredoka } from "next/font/google"
 
-const fredoka = Fredoka({ subsets: ["latin"], weight: ["700"] })
 
 const baseUrl = "https://mozahran.vercel.app"
 
