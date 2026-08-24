@@ -23,13 +23,13 @@ import PortfolioGrid from "@/components/PortfolioGrid";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "محمد زهران — آرت دايركتور ومصمم جرافيك" },
+      { title: "محمد زهران — جونيور آرت دايركتور ومصمم جرافيك" },
       {
         name: "description",
         content:
-          "محمد زهران — آرت دايركتور ومصمم جرافيك. أصمم هويات بصرية متكاملة للشركات في السعودية ومصر منذ عام 2012: شعارات، دليل هوية، مطبوعات، ومحتوى بصري.",
+          "محمد زهران — جونيور آرت دايركتور ومصمم جرافيك. أصمم هويات بصرية متكاملة للشركات في السعودية ومصر منذ عام 2012: شعارات، دليل هوية، مطبوعات، ومحتوى بصري.",
       },
-      { property: "og:title", content: "محمد زهران — آرت دايركتور ومصمم جرافيك" },
+      { property: "og:title", content: "محمد زهران — جونيور آرت دايركتور ومصمم جرافيك" },
       {
         property: "og:description",
         content:
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "محمد زهران — آرت دايركتور ومصمم جرافيك" },
+      { name: "twitter:title", content: "محمد زهران — جونيور آرت دايركتور ومصمم جرافيك" },
       {
         name: "twitter:description",
         content: "هوية بصرية احترافية للشركات في السعودية ومصر.",
@@ -164,7 +164,7 @@ function Index() {
           <div className="flex justify-center items-end h-full order-2 md:order-1 self-end">
             <img
               src={heroImg}
-              alt="محمد زهران — آرت دايركتور"
+              alt="محمد زهران — جونيور آرت دايركتور"
               width={1024}
               height={1024}
               className="pointer-events-none max-h-[50vh] md:max-h-[75vh] w-auto object-contain object-bottom scale-x-[-1]"
@@ -330,7 +330,7 @@ function Index() {
               <div>
                 <div className="text-lg font-semibold">محمد زهران</div>
                 <div className="text-sm text-primary-foreground/75">
-                  آرت دايركتور ومصمم جرافيك
+                  جونيور آرت دايركتور ومصمم جرافيك
                 </div>
               </div>
             </div>
@@ -338,7 +338,7 @@ function Index() {
 
           <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:col-span-7 md:p-14 border border-border/40 hover:-translate-y-1.5 hover:shadow-2xl hover:border-primary/20 transition-all duration-500 ease-out">
             <p className="text-base leading-loose text-foreground sm:text-lg">
-              أنا محمد زهران، آرت دايركتور ومصمم جرافيك أساعد الشركات
+              أنا محمد زهران، جونيور آرت دايركتور ومصمم جرافيك أساعد الشركات
               والمشروعات على تأسيس حضور بصري قوي وواضح. أعمل مع عملاء في مصر
               والسعودية، وأحرص دائمًا على ربط قرارات التصميم بأهداف العلامة
               التجارية وسلوك الجمهور المستهدف لضمان الفعالية والتميز.
