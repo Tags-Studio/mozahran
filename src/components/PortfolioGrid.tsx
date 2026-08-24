@@ -401,24 +401,70 @@ export default function PortfolioGrid() {
                 transition={{ duration: 0.5 }}
                 className="bg-surface rounded-3xl overflow-hidden border border-border/40 hover:border-primary/30 transition-all duration-300"
               >
-                <div
-                  className={`relative overflow-hidden ${
-                    project.category === "تصميمات السوشيال ميديا" ? "h-[380px]" : "h-64"
-                  }`}
-                >
-                  <img
-                    src={project.imageUrl || "/placeholder.svg"}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
-                    style={{ objectFit: project.category === "تصميمات السوشيال ميديا" ? "contain" : "cover" }}
-                  />
-                  <motion.div
-                    className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300"
-                    whileHover={{ opacity: 1 }}
+                {project.externalLink ? (
+                  <a
+                    href={project.externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block relative overflow-hidden cursor-pointer ${
+                      project.category === "تصميمات السوشيال ميديا" ? "h-[380px]" : "h-64"
+                    }`}
                   >
-                    <p className="text-white text-center px-4">{project.description}</p>
-                  </motion.div>
-                </div>
+                    <img
+                      src={project.imageUrl || "/placeholder.svg"}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      style={{ objectFit: project.category === "تصميمات السوشيال ميديا" ? "contain" : "cover" }}
+                    />
+                    <motion.div
+                      className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300"
+                      whileHover={{ opacity: 1 }}
+                    >
+                      <p className="text-white text-center px-4">{project.description}</p>
+                    </motion.div>
+                  </a>
+                ) : project.slug ? (
+                  <Link
+                    to="/work/$slug"
+                    params={{ slug: project.slug }}
+                    className={`block relative overflow-hidden cursor-pointer ${
+                      project.category === "تصميمات السوشيال ميديا" ? "h-[380px]" : "h-64"
+                    }`}
+                  >
+                    <img
+                      src={project.imageUrl || "/placeholder.svg"}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      style={{ objectFit: project.category === "تصميمات السوشيال ميديا" ? "contain" : "cover" }}
+                    />
+                    <motion.div
+                      className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300"
+                      whileHover={{ opacity: 1 }}
+                    >
+                      <p className="text-white text-center px-4">{project.description}</p>
+                    </motion.div>
+                  </Link>
+                ) : (
+                  <div
+                    onClick={() => openModal(project)}
+                    className={`block relative overflow-hidden cursor-pointer ${
+                      project.category === "تصميمات السوشيال ميديا" ? "h-[380px]" : "h-64"
+                    }`}
+                  >
+                    <img
+                      src={project.imageUrl || "/placeholder.svg"}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      style={{ objectFit: project.category === "تصميمات السوشيال ميديا" ? "contain" : "cover" }}
+                    />
+                    <motion.div
+                      className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300"
+                      whileHover={{ opacity: 1 }}
+                    >
+                      <p className="text-white text-center px-4">{project.description}</p>
+                    </motion.div>
+                  </div>
+                )}
                 <div className="p-6 text-right bg-slate-50 border-t border-border/10">
                   <div className="text-sm font-bold text-blue-600 mb-1">{project.category}</div>
                   <h3 className="text-xl font-semibold text-[#0F172A] mb-2">{project.title}</h3>
