@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { Link } from "@tanstack/react-router"
 import { motion, AnimatePresence } from "framer-motion"
 
 import ImageModal from "./ImageModal"
@@ -13,6 +14,7 @@ const projects = [
     description: "تصميم هوية بصرية متكاملة لمطعم زعتر و سمسم، تشمل الشعار، الألوان، التعبئة، والزي الرسمي.",
     imageUrl: "/images/zaatar-identity-portfolio3.webp",
     category: "الهوية البصرية",
+    slug: "zaatar-w-simsim-brand-identity",
     caseStudy: {
       client: "مطعم زعتر وسمسم (القاهرة والرياض)",
       problem: "الهوية القديمة للمطعم كانت تفتقر إلى التناغم والتفرد البصري، وصعوبة تطبيقها على مواد التعبئة والتغليف الصديقة للبيئة.",
@@ -26,6 +28,7 @@ const projects = [
     description: "تطوير هوية بصرية لجمعية التنمية الزراعية، مع التركيز على الاستدامة والطبيعة.",
     imageUrl: "/images/agricultural-development-association.avif",
     category: "الهوية البصرية",
+    slug: "agricultural-development-association-brand-identity",
     caseStudy: {
       client: "جمعية التنمية الزراعية بالأحساء (المملكة العربية السعودية)",
       problem: "كانت الجمعية تبحث عن هوية بصرية تجمع بين الطابع المؤسسي الرسمي وبين الطبيعة الزراعية لمنطقة الأحساء الغنية بالنخيل والخيرات.",
@@ -39,6 +42,7 @@ const projects = [
     description: "تصميم هوية بصرية شاملة لعلامة برجر راجي.",
     imageUrl: "/images/ragy-identity-portfolio.webp",
     category: "الهوية البصرية",
+    slug: "ragy-burger-brand-identity",
     caseStudy: {
       client: "مطعم برجر راجي (الرياض)",
       problem: "المنافسة الشديدة في قطاع مطاعم البرجر في الرياض تتطلب هوية بصرية مليئة بالطاقة والحيوية لتجذب فئة الشباب بشكل فوري.",
@@ -427,6 +431,27 @@ export default function PortfolioGrid() {
                       </svg>
                       عرض المشروع
                     </a>
+                  ) : project.slug ? (
+                    <Link
+                      to={`/work/${project.slug}`}
+                      className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center"
+                    >
+                      <svg
+                        className="w-4 h-4 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                        />
+                      </svg>
+                      عرض المشروع
+                    </Link>
                   ) : (
                     <button
                       onClick={() => openModal(project)}
