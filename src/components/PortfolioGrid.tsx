@@ -419,15 +419,15 @@ export default function PortfolioGrid() {
                     <p className="text-white text-center px-4">{project.description}</p>
                   </motion.div>
                 </div>
-                <div className="p-6 text-right">
-                  <div className="text-sm font-medium text-blue-400 mb-1">{project.category}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                <div className="p-6 text-right bg-slate-50 border-t border-border/10">
+                  <div className="text-sm font-bold text-blue-600 mb-1">{project.category}</div>
+                  <h3 className="text-xl font-semibold text-[#0F172A] mb-2">{project.title}</h3>
                   {project.externalLink ? (
                     <a
                       href={project.externalLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center"
+                      className="text-blue-600 hover:text-blue-700 font-semibold hover:underline inline-flex items-center"
                     >
                       <svg
                         className="w-4 h-4 ml-2"
@@ -449,7 +449,7 @@ export default function PortfolioGrid() {
                     <Link
                       to="/work/$slug"
                       params={{ slug: project.slug }}
-                      className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center"
+                      className="text-blue-600 hover:text-blue-700 font-semibold hover:underline inline-flex items-center"
                     >
                       <svg
                         className="w-4 h-4 ml-2"
@@ -470,7 +470,7 @@ export default function PortfolioGrid() {
                   ) : (
                     <button
                       onClick={() => openModal(project)}
-                      className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center"
+                      className="text-blue-600 hover:text-blue-700 font-semibold hover:underline inline-flex items-center"
                     >
                       <svg
                         className="w-4 h-4 ml-2"
