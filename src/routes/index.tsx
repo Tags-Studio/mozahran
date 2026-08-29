@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowUpLeft,
   Instagram,
@@ -49,12 +49,12 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV = [
-  { label: "الرئيسية", href: "#home" },
-  { label: "من أنا", href: "#about" },
-  { label: "معرض الأعمال", href: "#portfolio-grid" },
-  { label: "دراسات الحالة", href: "#portfolio-grid" },
-  { label: "الخدمات", href: "#services" },
-  { label: "تواصل", href: "#contact" },
+  { label: "الرئيسية", href: "#home", isRoute: false },
+  { label: "من أنا", href: "#about", isRoute: false },
+  { label: "معرض الأعمال", href: "#portfolio-grid", isRoute: false },
+  { label: "المدونة", href: "/blog", isRoute: true },
+  { label: "الخدمات", href: "#services", isRoute: false },
+  { label: "تواصل", href: "#contact", isRoute: false },
 ];
 
 function Index() {
@@ -62,20 +62,27 @@ function Index() {
     <main className="min-h-screen bg-background p-4 sm:p-6 lg:p-8">
       {/* Nav */}
       <nav className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-2 sm:gap-3">
-        {NAV.map((item, i) => (
-          <a
-            key={item.label}
-            href={item.href}
-            className={
-              "flex-1 min-w-[110px] rounded-full py-4 text-center text-sm font-medium tracking-wide transition-colors " +
-              (i === 0
-                ? "bg-primary text-primary-foreground"
-                : "bg-pill text-foreground/80 hover:text-foreground")
-            }
-          >
-            {item.label}
-          </a>
-        ))}
+        {NAV.map((item, i) => {
+          const className =
+            "flex-1 min-w-[110px] rounded-full py-4 text-center text-sm font-medium tracking-wide transition-colors " +
+            (i === 0
+              ? "bg-primary text-primary-foreground"
+              : "bg-pill text-foreground/80 hover:text-foreground");
+
+          if (item.isRoute) {
+            return (
+              <Link key={item.label} to={item.href} className={className}>
+                {item.label}
+              </Link>
+            );
+          }
+
+          return (
+            <a key={item.label} href={item.href} className={className}>
+              {item.label}
+            </a>
+          );
+        })}
       </nav>
 
       {/* Hero */}
