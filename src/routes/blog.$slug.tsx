@@ -1,6 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { getPostBySlug } from "../lib/blogScheduler";
-import { ArrowRight, Calendar, Clock, User, Share2 } from "lucide-react";
+import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 
 export const Route = createFileRoute("/blog/$slug")({
   component: BlogPostPage,
@@ -45,19 +45,8 @@ function BlogPostPage() {
   const post = getPostBySlug(slug);
 
   if (!post) {
-    return (
-      <div className="min-h-screen bg-[#FAF8F5] text-[#2C241E] flex flex-col items-center justify-center p-4 text-center">
-        <h1 className="text-3xl font-black text-[#2C241E] mb-4">المقال غير موجود أو لم يُنشر بعد</h1>
-        <p className="text-[#6B5E54] mb-8">عذراً، المقال الذي تبحث عنه غير متوفر حالياً أو لم يحن موعد نشره المجدول.</p>
-        <Link
-          to="/blog"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
-        >
-          <ArrowRight className="w-4 h-4 ml-1" />
-          العودة للمدونة
-        </Link>
-      </div>
-    );
+    // Graceful soft redirect to the main blog page to prevent 404 errors and protect SEO
+    return <Navigate to="/blog" replace />;
   }
 
   const htmlContent = parseMarkdownToHtml(post.content);
