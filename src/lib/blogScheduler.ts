@@ -1,4 +1,4 @@
-import { blogPosts, type BlogPost } from "./blogData.rewritten";
+import { blogPostsRewritten as blogPosts, type BlogPost } from "./blogData.rewritten";
 
 // Launch date of the blog: August 29, 2026
 const LAUNCH_DATE = new Date("2026-08-29T00:00:00");
