@@ -99,9 +99,7 @@ export default function RagyBurgerCaseStudy() {
           <img
             src={project.image}
             alt={project.title}
-            fill
-            className="object-cover opacity-60 brightness-75 transition-transform duration-[3s] hover:scale-105"
-            
+            className="w-full h-full object-cover opacity-60 brightness-75 transition-transform duration-[3s] hover:scale-105"
           />
         </div>
         
@@ -128,7 +126,7 @@ export default function RagyBurgerCaseStudy() {
               Project No. 015
             </p>
             <h1 
-              className={`${fredoka.className} text-[5rem] font-black leading-[0.85] tracking-tight sm:text-[8rem] lg:text-[11rem] text-[#E31E24]`}
+              className="text-[5rem] font-black leading-[0.85] tracking-tight sm:text-[8rem] lg:text-[11rem] text-[#E31E24] font-sans"
               style={{ 
                 textShadow: "3px 3px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff, 0px 3px 0px #fff, 0px 0px 15px rgba(227,30,36,0.5)",
                 WebkitTextStroke: "1px #E31E24"
@@ -197,8 +195,7 @@ export default function RagyBurgerCaseStudy() {
               <img
                 src={project.image}
                 alt="فكرة برجر راجي"
-                fill
-                className="object-cover opacity-80"
+                className="w-full h-full object-cover opacity-80"
               />
             </div>
           </FadeIn>
@@ -312,8 +309,7 @@ export default function RagyBurgerCaseStudy() {
               <img 
                 src={app.src} 
                 alt={app.alt} 
-                fill 
-                className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" 
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-6 left-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
@@ -432,7 +428,7 @@ export default function RagyBurgerCaseStudy() {
               },
             ].map((related) => (
               <Link key={related.slug} href={`/work/${related.slug}`} className="group relative block overflow-hidden aspect-[16/9]">
-                <img src={related.image} alt={related.title} fill className="object-cover opacity-60 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
+                <img src={related.image} alt={related.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
                 <div className="absolute bottom-8 left-8">
                   <p className="text-[#FFC222] font-black uppercase text-sm mb-2">{related.category}</p>
