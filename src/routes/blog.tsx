@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { getPublishedPosts } from "../lib/blogScheduler";
 import { ArrowUpLeft, Calendar, Clock, BookOpen, Sparkles } from "lucide-react";
+import Navbar from "../components/Navbar";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -15,45 +16,13 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
 });
 
-const NAV = [
-  { label: "الرئيسية", href: "/", isRoute: true },
-  { label: "المدونة", href: "/blog", isRoute: true, active: true },
-  { label: "من أنا", href: "/#about", isRoute: false },
-  { label: "دراسات الحالة", href: "/#case-studies", isRoute: false },
-  { label: "معرض الأعمال", href: "/#portfolio-grid", isRoute: false },
-  { label: "الخدمات", href: "/#services", isRoute: false },
-  { label: "تواصل", href: "/#contact", isRoute: false },
-];
-
 function BlogPage() {
   const posts = getPublishedPosts();
 
   return (
     <main className="min-h-screen bg-background p-4 sm:p-6 lg:p-8">
       {/* Navigation */}
-      <nav className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-2 sm:gap-3">
-        {NAV.map((item) => {
-          const className =
-            "flex-1 min-w-[110px] rounded-full py-4 text-center text-sm font-medium tracking-wide transition-colors " +
-            (item.active
-              ? "bg-primary text-primary-foreground"
-              : "bg-pill text-foreground/80 hover:text-foreground");
-
-          if (item.isRoute) {
-            return (
-              <Link key={item.label} to={item.href} className={className}>
-                {item.label}
-              </Link>
-            );
-          }
-
-          return (
-            <a key={item.label} href={item.href} className={className}>
-              {item.label}
-            </a>
-          );
-        })}
-      </nav>
+      <Navbar activeTab="blog" />
 
       {/* Hero Section */}
       <section className="relative mx-auto mt-4 max-w-[1400px] overflow-hidden rounded-[2rem] bg-surface text-surface-foreground sm:mt-6 border border-border/30 hover:border-primary/20 hover:shadow-[0_40px_80px_rgba(59,130,246,0.15)] hover-3d p-8 sm:p-14 md:p-20">
