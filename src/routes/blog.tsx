@@ -19,6 +19,7 @@ const NAV = [
   { label: "الرئيسية", href: "/", isRoute: true },
   { label: "المدونة", href: "/blog", isRoute: true, active: true },
   { label: "من أنا", href: "/#about", isRoute: false },
+  { label: "دراسات الحالة", href: "/#case-studies", isRoute: false },
   { label: "معرض الأعمال", href: "/#portfolio-grid", isRoute: false },
   { label: "الخدمات", href: "/#services", isRoute: false },
   { label: "تواصل", href: "/#contact", isRoute: false },

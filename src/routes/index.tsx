@@ -51,6 +51,7 @@ export const Route = createFileRoute("/")({
 const NAV = [
   { label: "الرئيسية", href: "#home", isRoute: false },
   { label: "من أنا", href: "#about", isRoute: false },
+  { label: "دراسات الحالة", href: "#case-studies", isRoute: false },
   { label: "معرض الأعمال", href: "#portfolio-grid", isRoute: false },
   { label: "المدونة", href: "/blog", isRoute: true },
   { label: "الخدمات", href: "#services", isRoute: false },

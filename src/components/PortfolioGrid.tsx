@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "@tanstack/react-router"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -334,18 +334,43 @@ const projects = [
   },
 ]
 
-const categories = ["الكل", "الهوية البصرية", "تصميمات السوشيال ميديا", "تصاميم المطبوعات", "فيديو موشن جرافيك"]
+const categories = [
+  "الكل",
+  "دراسات الحالة",
+  "الهوية البصرية",
+  "تصميمات السوشيال ميديا",
+  "تصاميم المطبوعات",
+  "فيديو موشن جرافيك",
+]
 
 export default function PortfolioGrid() {
-  const [filter, setFilter] = useState("الهوية البصرية")
+  const [filter, setFilter] = useState("دراسات الحالة")
   const [selectedProject, setSelectedProject] = useState<any>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (typeof window !== "undefined") {
+        if (window.location.hash === "#case-studies") {
+          setFilter("دراسات الحالة")
+        }
+      }
+    }
+    handleHash()
+    window.addEventListener("hashchange", handleHash)
+    return () => window.removeEventListener("hashchange", handleHash)
+  }, [])
 
   const setCategoryFilter = (category: string) => {
     setFilter(category)
   }
 
-  const filteredProjects = filter === "الكل" ? projects : projects.filter((project) => project.category === filter)
+  const filteredProjects =
+    filter === "الكل"
+      ? projects
+      : filter === "دراسات الحالة"
+      ? projects.filter((project) => !!project.slug || !!project.caseStudy)
+      : projects.filter((project) => project.category === filter)
 
   const openModal = (project: any) => {
     setSelectedProject(project)
@@ -358,7 +383,8 @@ export default function PortfolioGrid() {
   }
 
   return (
-    <section id="portfolio-grid" className="mx-auto mt-6 max-w-[1400px]">
+    <section id="portfolio-grid" className="mx-auto mt-6 max-w-[1400px] scroll-mt-6">
+      <div id="case-studies" className="scroll-mt-10" />
       <div className="rounded-[2rem] bg-pill p-8 sm:p-12 md:p-16">
         <motion.div
           className="mb-12 text-right"
