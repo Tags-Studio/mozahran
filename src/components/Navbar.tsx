@@ -23,16 +23,16 @@ const CASE_STUDIES = [
     slug: "zaatar-w-simsim-brand-identity",
   },
   {
-    title: "هوية مطعم برجر راجي",
-    category: "هوية بصرية للمطاعم",
-    location: "الرياض",
-    slug: "ragy-burger-brand-identity",
-  },
-  {
     title: "هوية جمعية التنمية الزراعية",
     category: "هوية مؤسسية واجتماعية",
     location: "الأحساء",
     slug: "agricultural-development-association-brand-identity",
+  },
+  {
+    title: "هوية مطعم برجر راجي",
+    category: "هوية بصرية للمطاعم",
+    location: "الرياض",
+    slug: "ragy-burger-brand-identity",
   },
 ];
 
@@ -81,21 +81,21 @@ export default function Navbar({ activeTab = "home" }: NavbarProps) {
         onMouseEnter={() => setDropdownOpen(true)}
         onMouseLeave={() => setDropdownOpen(false)}
       >
-        <a
-          href="/#case-studies"
+        <button
+          type="button"
           onClick={(e) => {
-            // If on mobile, first tap opens dropdown
-            if (window.innerWidth < 768 && !dropdownOpen) {
-              e.preventDefault();
-              setDropdownOpen(true);
-            }
+            e.preventDefault();
+            e.stopPropagation();
+            setDropdownOpen((prev) => !prev);
           }}
           className={
-            "w-full flex items-center justify-center gap-1.5 rounded-full py-4 text-center text-sm font-medium tracking-wide transition-colors " +
+            "w-full flex items-center justify-center gap-1.5 rounded-full py-4 text-center text-sm font-medium tracking-wide transition-colors cursor-pointer " +
             (dropdownOpen
-              ? "bg-primary text-primary-foreground"
+              ? "bg-primary text-primary-foreground shadow-md"
               : "bg-pill text-foreground/80 hover:text-foreground")
           }
+          aria-expanded={dropdownOpen}
+          aria-haspopup="true"
         >
           <span>دراسات الحالة</span>
           <ChevronDown
@@ -103,7 +103,7 @@ export default function Navbar({ activeTab = "home" }: NavbarProps) {
               dropdownOpen ? "rotate-180" : ""
             }`}
           />
-        </a>
+        </button>
 
         {/* Dropdown Menu */}
         <div
