@@ -63,7 +63,7 @@ function BlogPostPage() {
   const htmlContent = parseMarkdownToHtml(post.content);
 
   return (
-    <main className="min-h-screen bg-background p-4 sm:p-6 lg:p-8">
+    <main className="min-h-screen bg-background p-4 sm:p-6 lg:p-8 overflow-x-hidden max-w-full">
       {/* Navigation */}
       <nav className="mx-auto flex max-w-[1000px] flex-wrap items-center gap-2 sm:gap-3 mb-10">
         <Link

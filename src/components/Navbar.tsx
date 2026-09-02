@@ -38,6 +38,7 @@ const CASE_STUDIES = [
 
 export default function Navbar({ activeTab = "home" }: NavbarProps) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [placement, setPlacement] = useState<"left" | "right" | "center">("left");
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on click outside
@@ -50,6 +51,22 @@ export default function Navbar({ activeTab = "home" }: NavbarProps) {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Determine smart placement for mobile screens so dropdown never hangs off-screen
+  useEffect(() => {
+    if (dropdownOpen && dropdownRef.current) {
+      const rect = dropdownRef.current.getBoundingClientRect();
+      if (window.innerWidth < 640) {
+        if (rect.left < window.innerWidth - rect.right) {
+          setPlacement("left");
+        } else {
+          setPlacement("right");
+        }
+      } else {
+        setPlacement("center");
+      }
+    }
+  }, [dropdownOpen]);
 
   return (
     <nav className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-2 sm:gap-3 relative z-40">
@@ -107,10 +124,16 @@ export default function Navbar({ activeTab = "home" }: NavbarProps) {
 
         {/* Dropdown Menu */}
         <div
-          className={`absolute top-[calc(100%+8px)] right-0 sm:right-1/2 sm:translate-x-1/2 w-80 sm:w-96 rounded-3xl bg-pill border border-border/40 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-200 z-50 ${
+          className={`absolute top-[calc(100%+8px)] ${
+            placement === "left"
+              ? "left-0 right-auto sm:left-1/2 sm:right-auto sm:-translate-x-1/2"
+              : placement === "right"
+              ? "right-0 left-auto sm:left-1/2 sm:right-auto sm:-translate-x-1/2"
+              : "left-0 sm:left-1/2 sm:right-auto sm:-translate-x-1/2"
+          } w-[calc(100vw-2.5rem)] max-w-[340px] sm:w-96 rounded-3xl bg-pill border border-border/40 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-200 z-50 ${
             dropdownOpen
-              ? "opacity-100 visible translate-y-0 pointer-events-auto"
-              : "opacity-0 invisible -translate-y-2 pointer-events-none"
+              ? "opacity-100 visible translate-y-0 pointer-events-auto block"
+              : "opacity-0 invisible -translate-y-2 pointer-events-none hidden"
           }`}
         >
           <div className="px-3 py-2 text-xs font-bold text-muted-foreground border-b border-border/30 flex items-center justify-between mb-1">
