@@ -4,6 +4,7 @@ import ZaatarCaseStudy from "../components/case-studies/ZaatarCaseStudy"
 import AgriculturalCaseStudy from "../components/case-studies/AgriculturalCaseStudy"
 import RagyBurgerCaseStudy from "../components/case-studies/RagyBurgerCaseStudy"
 import SakenCaseStudy from "../components/case-studies/SakenCaseStudy"
+import AlMousaSchoolCaseStudy from "../components/case-studies/AlMousaSchoolCaseStudy"
 import { Link } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/work/$slug")({
@@ -103,6 +104,10 @@ function CaseStudyPage() {
 
   if (slug === "saken-corporate-housing-brand-identity") {
     return <SakenCaseStudy />
+  }
+
+  if (slug === "al-mousa-school-cladding-facade") {
+    return <AlMousaSchoolCaseStudy />
   }
 
   return <StandardCaseStudy slug={slug} />

@@ -10,6 +10,13 @@ export interface NavbarProps {
 
 const CASE_STUDIES = [
   {
+    title: "لوحات وكلادينج مدرسة الشيخ عبدالرحمن الموسى",
+    category: "واجهات كلادينج ولوحات صرحية",
+    location: "الأحساء",
+    slug: "al-mousa-school-cladding-facade",
+    badge: "مشروع صرحي",
+  },
+  {
     title: "هوية ساكن للإسكان المؤسسي",
     category: "هوية عقارية ومؤسسية",
     location: "الجبيل الصناعية",
@@ -139,7 +146,7 @@ export default function Navbar({ activeTab = "home" }: NavbarProps) {
           <div className="px-3 py-2 text-xs font-bold text-muted-foreground border-b border-border/30 flex items-center justify-between mb-1">
             <span>دراسات الحالة المتكاملة</span>
             <span className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-              4 مشاريع
+              5 مشاريع
             </span>
           </div>
 
