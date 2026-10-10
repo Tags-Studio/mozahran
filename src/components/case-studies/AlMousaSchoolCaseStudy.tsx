@@ -150,6 +150,8 @@ export default function AlMousaSchoolCaseStudy() {
 
   const specifications = [
     { label: "نوع المشروع", value: "واجهات كلادينج معمارية ولوحات صرحية بالحروف البارزة 3D" },
+    { label: "مقاسات لوحة الواجهة الأمامية (المدخل الرئيسي)", value: "عرض 5 أمتار (5m) × ارتفاع 150 سم (1.5m)" },
+    { label: "مقاسات لوحة الواجهة الخلفية (البوابة الخلفية)", value: "عرض 10 أمتار (10m) × ارتفاع 120 سم (1.2m)" },
     { label: "الموقع الجغرافي", value: "محافظة الأحساء، المملكة العربية السعودية" },
     { label: "الجهة المستفيدة", value: "الإدارة العامة للتعليم بمحافظة الأحساء (تعليم الأحساء)" },
     { label: "المبادرة والوقف", value: "شراكة مجتمعية مع أسرة الموسى بالأحساء (الشيخ عبدالعزيز بن عبدالله الموسى والشيخ عبدالرحمن الموسى رحمه الله)" },
@@ -187,8 +189,8 @@ export default function AlMousaSchoolCaseStudy() {
   const executionSteps = [
     {
       step: "1",
-      title: "المسح الهندسي ودراسة واجهات الصرح",
-      desc: "رفع المقاسات الميدانية ثلاثية الأبعاد لبوابة المدخل والأقواس، وتحديد محاور الرؤية المثالية لمرتادي الطريق والشارع المقابل للمدرسة.",
+      title: "المسح الهندسي ورفع المقاسات الميدانية",
+      desc: "رفع المقاسات الميدانية بدقة متناهية: 5 أمتار عرض × 150 سم ارتفاع للواجهة الأمامية، و10 أمتار عرض × 120 سم ارتفاع للواجهة الخلفية، مع دراسة محاور الرؤية وزوايا الشارع.",
     },
     {
       step: "2",
@@ -240,7 +242,7 @@ export default function AlMousaSchoolCaseStudy() {
             </Link>
             <span>/</span>
             <Link to="/#portfolio-grid" className="hover:text-[#1E1B18] transition-colors">
-              أعمالنا
+              لوحات 3D
             </Link>
             <span>/</span>
             <span className="text-[#1E1B18] font-bold" aria-current="page">
@@ -251,7 +253,7 @@ export default function AlMousaSchoolCaseStudy() {
           <FadeIn direction="up" duration={0.8}>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/35 text-[#8F6B10] text-xs font-bold tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-              <span>واجهات معمارية ولوحات صرحية 3D — الأحساء</span>
+              <span>لوحات 3D • واجهات كلادينج صرحية — الأحساء</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1E1B18] leading-[1.25] tracking-tight max-w-4xl">
@@ -259,16 +261,16 @@ export default function AlMousaSchoolCaseStudy() {
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[#5A524A] max-w-3xl">
-              تنفيذ هندسي صرحي يجمع بين تكسيات الكلادينج المعمارية وألواح الحجر الطبيعي، مع حروف بارزة ثلاثية الأبعاد من الإستانلس ستيل المطلي بالتيتانيوم الذهبي ونظام إضاءة LED خلفية غير مباشرة (Halo-lit) لصرح قرآني رائد بمحافظة الأحساء.
+              تنفيذ هندسي صرحي يجمع بين تكسيات الكلادينج المعمارية وألواح الحجر الطبيعي، مع حروف بارزة 3D من الإستانلس ستيل المطلي بالتيتانيوم الذهبي بمقاسات دقيقة: <strong>الواجهة الأمامية (5م × 150 سم)</strong> و<strong>الواجهة الخلفية (10م × 120 سم)</strong> ونظام إضاءة LED خلفية غير مباشرة (Halo-lit) لصرح قرآني رائد بالأحساء.
             </p>
 
             {/* Quick Stats Grid */}
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
               {[
-                { label: "الجهة المستفيدة", value: "مدرسة الشيخ عبدالرحمن الموسى" },
+                { label: "مقاس الواجهة الأمامية", value: "5م عرض × 150 سم ارتفاع" },
+                { label: "مقاس الواجهة الخلفية", value: "10م عرض × 120 سم ارتفاع" },
                 { label: "الشراكة المجتمعية", value: "تعليم الأحساء & أسرة الموسى" },
-                { label: "الموقع", value: "محافظة الأحساء - السعودية" },
-                { label: "سنة التدشين", value: "1448هـ (ابتدائي - متوسط)" },
+                { label: "سنة التدشين والنوع", value: "1448هـ • لوحات 3D وكلادينج" },
               ].map((item, idx) => (
                 <div
                   key={idx}
