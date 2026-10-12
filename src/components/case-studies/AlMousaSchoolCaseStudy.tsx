@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Link } from "@tanstack/react-router"
 import { FadeIn, FadeInStaggerContainer, FadeInStaggerItem } from "../ui/FadeIn"
 
-const baseUrl = "https://mozahran.vercel.app"
+const baseUrl = "https://www.mozahran.com"
 
 interface GalleryImage {
   src: string

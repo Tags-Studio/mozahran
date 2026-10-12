@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router"
 import { caseStudies } from "../../lib/caseStudies"
 import { FadeIn, FadeInStaggerContainer, FadeInStaggerItem } from "../ui/FadeIn"
 
-const baseUrl = "https://mozahran.vercel.app"
+const baseUrl = "https://www.mozahran.com"
 
 export default function AgriculturalCaseStudy() {
   const project = caseStudies.find(

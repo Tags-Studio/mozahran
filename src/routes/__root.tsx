@@ -77,14 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "محمد زهران | آرت دايركتور ومصمم هوية بصرية ومطبوعات" },
+      { name: "description", content: "الموقع الرسمي للمصمم الجرافيكي المستقل محمد زهران. تصميم وتطوير الهويات البصرية، المطبوعات التجارية، والواجهات الصرحية." },
+      { name: "author", content: "محمد زهران" },
+      { name: "google-site-verification", content: "googlef8112393af735317" },
+      { property: "og:title", content: "محمد زهران | آرت دايركتور ومصمم هوية بصرية" },
+      { property: "og:description", content: "تصميم وتطوير الهويات البصرية، المطبوعات التجارية، والواجهات الصرحية." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.mozahran.com" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
